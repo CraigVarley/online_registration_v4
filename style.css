@@ -1,5 +1,232 @@
+/* flex */
+
 form,
 fieldset {
     display:flex;
     flex-direction: column;
+}
+
+.news-wrap {
+    display: inline-flex;
+    flex-flow: column;
+}
+
+.news-wrap legend {
+    text-align: center;
+}
+
+.checkradio {
+    display: flex;
+    flex-direction: row ;
+    margin:0 5px;
+}
+
+.checkradio input {
+    flex-basis:10%;
+    padding-bottom: 2px;
+    padding-top:2px;
+
+}
+
+.checkradio label {
+    flex-basis: 50%;
+    text-align: left;
+    padding-bottom: 2px;
+    padding-top:2px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+
+/* fonts */
+
+h1, h2, legend {
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+}
+
+legend {
+    font-size: x-large;
+}
+
+
+/* element styling */
+/* header & top main */
+
+header {
+    background-color: #2D3945;
+    text-align: center;
+}
+
+header h1 {
+    color:white;
+    font-size: 1.3em;
+    margin:0;
+    padding:1em 0;
+}
+
+div {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+div h2 {
+    color:black;
+    margin-top:30px;
+    margin-bottom:0;
+}
+
+div p {
+    color:#b9b9b9;
+    padding-left:1em;
+    padding-right: 1em;
+    font-size: large;
+    margin-top: 10px;
+    margin-bottom:40px;
+}
+
+hr {
+    margin-top:0;
+    margin-bottom:5px;
+    margin-left:auto;
+    margin-right: auto;
+    width:100%;
+    background-color: black;
+}
+
+.hrtop {
+    height:3px;
+    width:90%;
+}
+
+.hrbot {
+    height:1px;
+    width:90%;
+}
+
+/* form */
+
+form {
+    width:95%;
+    margin: auto;
+}
+
+fieldset {
+    border:0;
+}
+
+.hrnews {
+    margin-top:40px;
+}
+
+label {
+    color:#acacac;
+    padding-bottom:15px;
+    padding-top:15px;
+    font-size: 1.1em;
+}
+
+input {
+    box-sizing: border-box;
+    padding-left:10px;
+}
+
+input:focus {
+    border: 3px solid #8BA1B6; 
+}
+
+input,
+select {
+    border:0;
+    background-color: #EFF0F1;
+    height:50px;
+    border-radius:5px;
+    width:100%;
+    justify-content: center;
+}
+
+input:checked{
+    border:5px solid blue;
+}
+
+input[type=checkbox]:checked + label,
+input[type=radio]:checked + label {
+    color:#4EBBB5;
+}
+
+input::placeholder {
+    text-align: right;
+    font-style: italic;
+    color:#acacac;
+}
+
+select {
+    color:#acacac;
+}
+
+input[type="zip"] {
+    width:60%;
+}
+
+.news-p {
+    margin-bottom:5px;
+    margin-top: 20px;
+    text-align: left;
+    padding-left:10px;
+}
+
+.newsboxes {
+    padding-left:0px;
+}
+
+.newsboxes legend {
+    padding-left: 10px;
+}
+
+.lett-p {
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+
+label[for="topics"] {
+    text-align: left;
+    padding-left: 10px;
+}
+
+textarea[id="topics"] {
+    box-sizing: border-box  ;
+    width:320px;
+    height:100px;
+    resize:none;
+    border-radius:3%;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    background-color:#EFF0F1;
+    border:0;
+    padding:10px;
+}
+
+button[name="signup"] {
+    width:320px;
+    height:60px;
+    background-color: #4EBBB5;
+    border:0;
+    border-radius: 3%;
+    color:white;
+    font-weight: 600;    
+    margin-left:10px;
+    font-size: x-large  ;
+}
+
+/* footer */
+
+footer p {
+    font-style: italic;
+    color: #b9b9b9;
+    text-align: center;
+    margin-top: 0;
 }

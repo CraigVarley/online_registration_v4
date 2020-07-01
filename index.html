@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
     <title>Online Registration</title>
 </head>
 <body>
     <header>
         <h1>THE CODE REVIEW</h1>
     </header>
-
     <div>
         <h2>Signup for our newsletter</h2>
-        <p>Get the latest news on how your code is doing right in your inbox</p>
-        <hr>
-        <hr>
+        <p class="signup-p">Get the latest news on how your code is doing right in your inbox</p>
+        <hr class="hrtop">
+        <hr class="hrbot">
     </div>
     <form>
         <fieldset>
@@ -32,7 +32,8 @@
             <label for="city">City</label>
             <input type="text" name="city" id="city">
             <label for="state">State</label>
-            <select name="state" id="state" placeholder="Choose State">
+            <select name="state" id="state">
+                <option value="" disabled selected>Choose State</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
                 <option value="AR">Arkansas</option>
@@ -86,27 +87,38 @@
             </select>
             <label for="zip">Zip Code</label>
             <input type="zip" id="zip" name="zip">
+            <hr class="hrnews">
         </fieldset>
-        <fieldset>
-            <legend>Newsletter</legend>
-            <p>Select the newsletter you would like to receive</p>
-            <input type="checkbox" id="html" name="html" checked>
-            <label for="html">HTML News</label>
-            <input type="checkbox" id="css" name="css">
-            <label for="css">CSS News</label>
-            <input type="checkbox" id="js" name="js">
-            <label for="js">Javascript News</label>
-            <p>Newsletter format</p>
-            <input type="radio" name="html2" id="html2" checked>
-            <label for="html2">HTML</label>
-            <input type="radio" name="plain" id="plain">
-            <label for="plain">Plain text</label>
+        <fieldset class="newsboxes">
+            <div class="news-wrap">
+                <legend>Newsletter</legend>
+                <p class="news-p">Select the newsletter you would like to receive</p>
+                <div class="checkradio">
+                    <input type="checkbox" id="html" name="html" checked>
+                    <label for="html">HTML News</label>
+                </div>
+                <div class="checkradio">
+                    <input type="checkbox" id="css" name="css">
+                    <label for="css">CSS News</label>
+                </div>
+                <div class="checkradio">
+                    <input type="checkbox" id="js" name="js">
+                    <label for="js">Javascript News</label>
+                </div>
+                <p class="lett-p">Newsletter format</p>
+                <div class="checkradio">
+                    <input type="radio" name="style" id="html2" checked>
+                    <label for="html2">HTML</label>
+                </div>
+                <div class="checkradio">
+                    <input type="radio" name="style" id="plain">
+                    <label for="plain">Plain text</label>
+                </div>
+                <label for="topics">Other topics you'd like to hear about</label>
+                <textarea id="topics" name="topics"></textarea>
+                <button name="signup">Sign Up</button>
+            </div>
         </fieldset>
-        <fieldset>
-            <label for="topics">Other topics you'd like to hear about</label>
-            <textarea id="topics" name="topics"></textarea>
-        </fieldset>
-        <button name="signup">Sign Up</button>
     </form>
     <footer>
         <p>Copyright The Code Review</p>
