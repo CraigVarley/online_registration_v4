@@ -11,8 +11,8 @@ fieldset {
     flex-flow: column;
 }
 
-.news-wrap legend {
-    text-align: center;
+.news-wrap h2 {
+    text-align: left;
 }
 
 .checkradio {
@@ -39,12 +39,24 @@ fieldset {
 
 
 
+/* fonts & bg color */
 
-/* fonts */
+body {
+        background-color: #ffffff;
+        /* i pinched this from https://www.eggradients.com/category/gray-gradient - color:Sweet Airan */
+        background-image: linear-gradient(315deg, #e5ebf5 0%, #dee6f3 74%);
+
+    }
 
 h1, h2, legend {
     font-family: 'Roboto Slab', serif;
     font-weight: normal;
+}
+
+label {
+    font-family: 'Merriweather', serif;
+    font-size: 0.8em;
+    font-weight: bold;
 }
 
 legend {
@@ -125,7 +137,6 @@ label {
     color:#acacac;
     padding-bottom:15px;
     padding-top:15px;
-    font-size: 1.1em;
 }
 
 input {
@@ -133,8 +144,10 @@ input {
     padding-left:10px;
 }
 
-input:focus {
-    border: 3px solid #8BA1B6; 
+input:focus,
+textarea[id="topics"]:focus {
+    border-radius: 6px;
+    border: 3px solid #46698B; 
 }
 
 input,
@@ -160,13 +173,21 @@ input::placeholder {
     text-align: right;
     font-style: italic;
     color:#acacac;
+    padding-right: 20px;
+}
+
+input[type="tel"]::placeholder,
+input[id="zip"]::placeholder {
+    text-align:left;
+    font-style: italic;
+    color:#acacac;
 }
 
 select {
     color:#acacac;
 }
 
-input[type="zip"] {
+input[id="zip"] {
     width:60%;
 }
 
@@ -181,7 +202,7 @@ input[type="zip"] {
     padding-left:0px;
 }
 
-.newsboxes legend {
+.newsboxes h2 {
     padding-left: 10px;
 }
 
@@ -229,4 +250,78 @@ footer p {
     color: #b9b9b9;
     text-align: center;
     margin-top: 0;
+}
+
+
+/* media queries */
+@media (min-width:768px) {
+    
+    form,
+    .top-div
+     {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    .hrtop,
+    .hrbot {
+        width:95%;
+    }
+
+    fieldset {
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+
+    input[type="text"],
+    input[type="tel"] {
+        flex-basis:75%;
+        box-sizing: border-box;
+        margin-bottom:20px;
+    }
+
+    input[id="zip"] {
+        flex-basis:30%;
+    }
+
+    fieldset label {
+        flex-basis:25%;
+        box-sizing: border-box;
+    }
+
+    fieldset select {
+        flex-basis:75%;
+        margin-bottom:20px;
+    }
+
+    label[for="topics"] {
+       flex-basis:5%;
+    }
+
+    textarea[id="topics"] {
+        width:200%;
+        height:100px;
+    }
+
+    button[name="signup"] {
+        width:200%;
+    }
+
+    fieldset legend {
+        margin-bottom:20px;
+    }
+
+    .newsboxes h2 {
+        margin-bottom: 0;
+    }
+
+    .newswrap {
+        flex-basis:100%;
+    }
+
 }
