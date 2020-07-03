@@ -6,6 +6,13 @@ fieldset {
     flex-direction: column;
 }
 
+.textarea {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width:100%;
+}
+
 .news-wrap {
     display: inline-flex;
     flex-flow: column;
@@ -18,25 +25,31 @@ fieldset {
 .checkradio {
     display: flex;
     flex-direction: row ;
-    margin:0 5px;
+    margin:0;
+    height:40px;
 }
 
 .checkradio input {
     flex-basis:5%;
     padding-bottom: 2px;
     padding-top:2px;
-
+    height:20px;
 }
 
 .checkradio label {
     flex-basis: 50%;
     text-align: left;
     padding-bottom: 2px;
-    padding-top:2px;
-    margin-top: auto;
+    margin-top:0;
     margin-bottom: auto;
-    margin-left:5px;
+    margin-left:15px;
 }
+
+.textarea {
+    margin-top:20px;
+}
+
+
 
 
 
@@ -56,12 +69,13 @@ h1, h2, legend {
 
 label {
     font-family: 'Merriweather', serif;
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: bold;
 }
 
 legend {
     font-size: x-large;
+    margin-bottom:10px;
 }
 
 
@@ -87,15 +101,14 @@ div {
 
 div h2 {
     color:black;
-    margin-top:30px;
+    margin-top:20px;
     margin-bottom:0;
 }
 
 div p {
     color:#b9b9b9;
-    padding-left:1em;
     padding-right: 1em;
-    font-size: large;
+    font-size: larger;
     margin-top: 10px;
     margin-bottom:40px;
 }
@@ -134,7 +147,11 @@ fieldset {
     margin-top:40px;
 }
 
-label {
+fieldset div {
+    text-align: left;
+}
+
+fieldset div label {
     color:#acacac;
     padding-bottom:15px;
     padding-top:15px;
@@ -143,6 +160,14 @@ label {
 input {
     box-sizing: border-box;
     padding-left:10px;
+}
+
+fieldset input {
+    margin-top:10px;
+}
+
+.checkradio input {
+    margin-top:10px;
 }
 
 input:focus,
@@ -196,51 +221,44 @@ input[id="zip"] {
     margin-bottom:5px;
     margin-top: 20px;
     text-align: left;
-    padding-left:10px;
+    padding-right:0;
 }
 
 .newsboxes {
     padding-left:0px;
 }
 
-.newsboxes h2 {
-    padding-left: 10px;
-}
-
 .lett-p {
     text-align: left;
-    padding-left: 10px;
     padding-top: 15px;
     margin-bottom: 10px;
 }
 
 label[for="topics"] {
     text-align: left;
-    padding-left: 10px;
 }
 
 textarea[id="topics"] {
     box-sizing: border-box  ;
-    width:320px;
+    width:100%;
     height:100px;
     resize:none;
     border-radius:3%;
+    margin-top: 15px;
     margin-bottom: 20px;
-    margin-left: 10px;
     background-color:#EFF0F1;
     border:0;
     padding:10px;
 }
 
 button[name="signup"] {
-    width:320px;
+    width:100%;
     height:60px;
     background-color: #4EBBB5;
     border:0;
     border-radius: 3%;
     color:white;
     font-weight: 600;    
-    margin-left:10px;
     font-size: x-large  ;
 }
 
@@ -275,8 +293,12 @@ footer p {
     }
 
     fieldset {
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    }
+
+    fieldset div {
+        display: flex;
     }
 
     .checkradio input {
@@ -305,11 +327,18 @@ footer p {
     }
 
     label[for="topics"] {
-       flex-basis:5%;
+       flex-basis:100%;
+       max-height: 50px;
+    }
+
+    .textarea {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
     }
 
     textarea[id="topics"] {
-        width:800px;
+        width:100%;
         height:100px;
     }
 
