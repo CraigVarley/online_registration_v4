@@ -51,8 +51,6 @@ fieldset {
 
 
 
-
-
 /* fonts & bg color */
 
 body {
@@ -106,7 +104,7 @@ div h2 {
 }
 
 div p {
-    color:#b9b9b9;
+    color:#898989;
     padding-right: 1em;
     font-size: larger;
     margin-top: 10px;
@@ -152,7 +150,7 @@ fieldset div {
 }
 
 fieldset div label {
-    color:#acacac;
+    color:#898989;
     padding-bottom:15px;
     padding-top:15px;
 }
@@ -198,7 +196,7 @@ input[type=radio]:checked + label {
 input::placeholder {
     text-align: right;
     font-style: italic;
-    color:#acacac;
+    color:#898989;
     padding-right: 20px;
 }
 
@@ -206,11 +204,11 @@ input[type="tel"]::placeholder,
 input[id="zip"]::placeholder {
     text-align:left;
     font-style: italic;
-    color:#acacac;
+    color:#898989;
 }
 
 select {
-    color:#acacac;
+    color:#898989;
 }
 
 input[id="zip"] {
@@ -266,7 +264,7 @@ button[name="signup"] {
 
 footer p {
     font-style: italic;
-    color: #b9b9b9;
+    color: #898989;
     text-align: center;
     margin-top: 0;
 }
@@ -333,7 +331,7 @@ footer p {
 
     .textarea {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         flex-direction: column;
     }
 
