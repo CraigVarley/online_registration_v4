@@ -170,13 +170,15 @@ fieldset input {
 
 /* css transitions on input when focused */ 
 input:focus,
-textarea[id="topics"]:focus {
+textarea[id="topics"]:focus,
+select:focus {
     border-radius: 6px;
     background-color: lightgray;
     color:black;
     font-size: 1.2em;
     border: 3px solid #46698B;
     transition: border 0.2s ease-in;
+    outline: none;
 }
 /*end transition style **/
 
