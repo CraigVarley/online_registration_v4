@@ -168,11 +168,17 @@ fieldset input {
     margin-top:10px;
 }
 
+/* css transitions on input when focused */ 
 input:focus,
 textarea[id="topics"]:focus {
     border-radius: 6px;
-    border: 3px solid #46698B; 
+    background-color: lightgray;
+    color:black;
+    font-size: 1.2em;
+    border: 3px solid #46698B;
+    transition: border 0.2s ease-in;
 }
+/*end transition style **/
 
 input,
 select {
@@ -304,7 +310,8 @@ footer p {
     }
 
     input[type="text"],
-    input[type="tel"] {
+    input[type="tel"],
+    input[type="email"] {
         flex-basis:75%;
         box-sizing: border-box;
         margin-bottom:20px;
